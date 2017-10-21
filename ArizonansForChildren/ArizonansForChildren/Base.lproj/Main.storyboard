@@ -1,24 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbB-ko-6nU">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeViewController-->
+        <scene sceneID="t2p-Dr-Fde">
+            <objects>
+                <viewController title="WelcomeViewController" id="zbB-ko-6nU" customClass="WelcomeViewController" customModule="ArizonansForChildren" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="089-4X-M1V">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="eBn-hu-egP">
+                                <rect key="frame" x="30" y="503" width="1052" height="231"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDz-0A-eBZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="501" height="231"/>
+                                        <state key="normal" title="Sign-In" image="Check-In-Button"/>
+                                        <state key="selected" image="Check-In-Button-selected"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="0Sj-TT-fb4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-d8-fnE">
+                                        <rect key="frame" x="551" y="0.0" width="501" height="231"/>
+                                        <state key="normal" title="Sign-Out" image="Check-Out-Button"/>
+                                        <state key="selected" image="Check-Out-Button-selected"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Arizonans For Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc5-kZ-rGR">
+                                <rect key="frame" x="186" y="218" width="740" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select an option from below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wh-B3-ml9">
+                                <rect key="frame" x="261.5" y="286" width="589" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CompanyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="T7R-nX-9R5">
+                                <rect key="frame" x="456" y="110" width="200" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nwd-lR-zmT" firstAttribute="bottom" secondItem="eBn-hu-egP" secondAttribute="bottom" constant="100" id="7HK-3H-2TR"/>
+                            <constraint firstItem="nwd-lR-zmT" firstAttribute="trailing" secondItem="eBn-hu-egP" secondAttribute="trailing" constant="30" id="94d-ge-GfE"/>
+                            <constraint firstItem="T7R-nX-9R5" firstAttribute="centerX" secondItem="089-4X-M1V" secondAttribute="centerX" id="IWd-aM-OYV"/>
+                            <constraint firstItem="1Wh-B3-ml9" firstAttribute="top" secondItem="fc5-kZ-rGR" secondAttribute="bottom" constant="8" id="TjH-te-pfZ"/>
+                            <constraint firstItem="1Wh-B3-ml9" firstAttribute="centerX" secondItem="089-4X-M1V" secondAttribute="centerX" id="USJ-jV-lVt"/>
+                            <constraint firstItem="eBn-hu-egP" firstAttribute="centerX" secondItem="089-4X-M1V" secondAttribute="centerX" id="bmW-Ed-UcU"/>
+                            <constraint firstItem="fc5-kZ-rGR" firstAttribute="centerX" secondItem="089-4X-M1V" secondAttribute="centerX" id="euq-RX-0ST"/>
+                            <constraint firstItem="T7R-nX-9R5" firstAttribute="top" secondItem="nwd-lR-zmT" secondAttribute="top" constant="90" id="vDj-kl-cJv"/>
+                            <constraint firstItem="fc5-kZ-rGR" firstAttribute="top" secondItem="T7R-nX-9R5" secondAttribute="bottom" constant="8" id="xT4-Bk-qPJ"/>
+                            <constraint firstItem="eBn-hu-egP" firstAttribute="leading" secondItem="nwd-lR-zmT" secondAttribute="leading" constant="30" id="zOK-kt-8oP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nwd-lR-zmT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qez-T8-g8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156.4748201438849" y="-432.37410071942452"/>
+        </scene>
+        <!--SignInLookupViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignInLookupViewController" id="BYZ-38-t0r" customClass="SignInLookupViewController" customModule="ArizonansForChildren" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search parent's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTj-jH-b1C">
+                                <rect key="frame" x="40" y="100" width="1032" height="45"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="searchNameChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="ci1-SY-uh7"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oTj-jH-b1C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="JvL-9r-dNh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oTj-jH-b1C" secondAttribute="trailing" constant="40" id="bNK-oj-Ju7"/>
+                            <constraint firstItem="oTj-jH-b1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="fJo-FS-e0C"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameSearched" destination="oTj-jH-b1C" id="Rko-OF-O6r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="492.62589928057554" y="-432.37410071942452"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Check-In-Button" width="572" height="231"/>
+        <image name="Check-In-Button-selected" width="572" height="231"/>
+        <image name="Check-Out-Button" width="572" height="231"/>
+        <image name="Check-Out-Button-selected" width="572" height="231"/>
+        <image name="CompanyLogo" width="200" height="100"/>
+    </resources>
 </document>
