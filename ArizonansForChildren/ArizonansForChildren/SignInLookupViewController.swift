@@ -82,6 +82,14 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "checkInPopupID") as! PopoverViewController
+		self.addChildViewController(popoverVC)
+		popoverVC.view.frame = self.view.frame
+		self.view.addSubview(popoverVC.view)
+		popoverVC.didMove(toParentViewController: self)
+	}
+	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if (segue.identifier == "existsSegue") {
 			if let detailViewController: DetailViewController = segue.destination as? DetailViewController {
