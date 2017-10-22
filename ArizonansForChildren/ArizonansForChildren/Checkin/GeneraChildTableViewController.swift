@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GeneralSupervisorTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GeneralChildTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet weak var table: UITableView!
 	var selectedPerson: Person? = nil
@@ -16,6 +16,8 @@ class GeneralSupervisorTableViewController: UIViewController, UITableViewDelegat
         super.viewDidLoad()
 		table.delegate = self
 		table.dataSource = self
+		table.allowsSelection = false
+		table.separatorStyle = UITableViewCellSeparatorStyle.none
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,7 +33,7 @@ class GeneralSupervisorTableViewController: UIViewController, UITableViewDelegat
 
     // MARK: - Table view data source
 
-	func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
@@ -39,23 +41,21 @@ class GeneralSupervisorTableViewController: UIViewController, UITableViewDelegat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
 		if (selectedPerson != nil) {
-			if (selectedPerson?.parentAid != nil) {
-				return 1
+			if (selectedPerson?.children != nil) {
+				return (selectedPerson?.children.count)!
 			}
 		}
 		return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "supervisorCell", for: indexPath) as! GeneralTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "childCell") as! GeneralTableViewCell
 		if (selectedPerson != nil) {
-			if (selectedPerson?.parentAid != nil) {
-				cell.nameLabel.text = selectedPerson?.parentAid?.name
+			if (selectedPerson?.children != nil) {
+				cell.nameLabel.text = selectedPerson?.children[indexPath.row].name
 			}
 		}
-		
 		return cell
-		
     }
 
     /*

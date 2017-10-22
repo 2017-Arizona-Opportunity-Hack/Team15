@@ -8,20 +8,19 @@
 
 import UIKit
 
-class GeneralChildTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class GeneralTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+	
+	
 	@IBOutlet weak var table: UITableView!
 	var selectedPerson: Person? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 		table.delegate = self
 		table.dataSource = self
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+		table.allowsSelection = false
+		table.separatorStyle = UITableViewCellSeparatorStyle.none
+        table.reloadData()
+		
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +30,7 @@ class GeneralChildTableViewController: UIViewController, UITableViewDataSource, 
 
     // MARK: - Table view data source
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+	func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
@@ -39,21 +38,19 @@ class GeneralChildTableViewController: UIViewController, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
 		if (selectedPerson != nil) {
-			if (selectedPerson?.children != nil) {
-				return (selectedPerson?.children.count)!
-			}
+			return 1
 		}
 		return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "childCell") as! GeneralTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "parentCell", for: indexPath) as! GeneralTableViewCell
 		if (selectedPerson != nil) {
-			if (selectedPerson?.children != nil) {
-				cell.nameLabel.text = selectedPerson?.children[indexPath.row].name
-			}
+			cell.nameLabel.text = selectedPerson?.name
 		}
+		
 		return cell
+		
     }
 
     /*

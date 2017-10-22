@@ -112,6 +112,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57ECCCF41F9CF9260049F179 /* Checkin */ = {
+			isa = PBXGroup;
+			children = (
+				574A7BB51F9C5E2200559BD0 /* PopoverViewController.swift */,
+				5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */,
+				57A2F1FD1F9CC40500DB9C0C /* GeneralTableViewCell.swift */,
+				57A2F1FF1F9CC44100DB9C0C /* GeneralTableViewController.swift */,
+				57A2F2031F9CCDE300DB9C0C /* GeneralRelativeTableViewController.swift */,
+				57A2F2051F9CCEDF00DB9C0C /* GeneralSupervisorTableViewController.swift */,
+				57A2F2011F9CC83100DB9C0C /* GeneraChildTableViewController.swift */,
+			);
+			path = Checkin;
+			sourceTree = "<group>";
+		};
+		57ECCCF51F9CFB660049F179 /* Signout */ = {
+			isa = PBXGroup;
+			children = (
+				57A2F1F91F9CA03E00DB9C0C /* SignOutViewController.swift */,
+				57A2F1FB1F9CA08100DB9C0C /* SignOutTableViewCell.swift */,
+			);
+			path = Signout;
+			sourceTree = "<group>";
+		};
+		57ECCCF61F9CFC2A0049F179 /* AddSection */ = {
+			isa = PBXGroup;
+			children = (
+				57175A161F9C3DB800BCE537 /* DetailViewController.swift */,
+				57A2F1F71F9C9C8300DB9C0C /* RelativeTableViewCell.swift */,
+				57A2F1F51F9C9C1B00DB9C0C /* RelativeListViewController.swift */,
+				570854D31F9C6FCB0089DC2C /* ParentListViewController.swift */,
+				5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */,
+				570854D51F9C91F60089DC2C /* ParentAddTableViewCell.swift */,
+				574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */,
+				574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */,
+			);
+			path = AddSection;
+			sourceTree = "<group>";
+		};
+		57ECCCF71F9CFC650049F179 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5781B9371F9C223A0063FBE7 /* Person.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		57ECCCF81F9CFC8B0049F179 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				57FCD3D71F9BDB2800FC2033 /* LaunchScreen.storyboard */,
+				57FCD3CF1F9BDB2800FC2033 /* Main.storyboard */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		57FCD3BF1F9BDB2800FC2033 = {
 			isa = PBXGroup;
 			children = (
@@ -135,29 +190,14 @@
 		57FCD3CA1F9BDB2800FC2033 /* ArizonansForChildren */ = {
 			isa = PBXGroup;
 			children = (
-				5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */,
-				5781B9371F9C223A0063FBE7 /* Person.swift */,
 				57FCD3FE1F9C070C00FC2033 /* WelcomeViewController.swift */,
+				57ECCCF81F9CFC8B0049F179 /* Layouts */,
+				57ECCCF71F9CFC650049F179 /* Objects */,
+				57ECCCF61F9CFC2A0049F179 /* AddSection */,
+				57ECCCF51F9CFB660049F179 /* Signout */,
+				57ECCCF41F9CF9260049F179 /* Checkin */,
 				57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */,
-				57FCD3CF1F9BDB2800FC2033 /* Main.storyboard */,
-				57A2F1FD1F9CC40500DB9C0C /* GeneralTableViewCell.swift */,
-				57A2F1FF1F9CC44100DB9C0C /* GeneralTableViewController.swift */,
-				57A2F2031F9CCDE300DB9C0C /* GeneralRelativeTableViewController.swift */,
-				57A2F2051F9CCEDF00DB9C0C /* GeneralSupervisorTableViewController.swift */,
-				57A2F2011F9CC83100DB9C0C /* GeneraChildTableViewController.swift */,
-				57A2F1FB1F9CA08100DB9C0C /* SignOutTableViewCell.swift */,
-				57A2F1F91F9CA03E00DB9C0C /* SignOutViewController.swift */,
-				57A2F1F71F9C9C8300DB9C0C /* RelativeTableViewCell.swift */,
-				57A2F1F51F9C9C1B00DB9C0C /* RelativeListViewController.swift */,
-				570854D31F9C6FCB0089DC2C /* ParentListViewController.swift */,
-				574A7BB51F9C5E2200559BD0 /* PopoverViewController.swift */,
-				574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */,
-				570854D51F9C91F60089DC2C /* ParentAddTableViewCell.swift */,
-				57175A161F9C3DB800BCE537 /* DetailViewController.swift */,
-				5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */,
-				574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */,
 				57FCD3D51F9BDB2800FC2033 /* Assets.xcassets */,
-				57FCD3D71F9BDB2800FC2033 /* LaunchScreen.storyboard */,
 				57FCD3DA1F9BDB2800FC2033 /* Info.plist */,
 				57FCD3D21F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld */,
 			);

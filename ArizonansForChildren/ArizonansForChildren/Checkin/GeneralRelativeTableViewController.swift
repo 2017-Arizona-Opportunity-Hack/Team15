@@ -16,6 +16,8 @@ class GeneralRelativeTableViewController: UIViewController, UITableViewDelegate,
         super.viewDidLoad()
 		table.delegate = self
 		table.dataSource = self
+		table.allowsSelection = false
+		table.separatorStyle = UITableViewCellSeparatorStyle.none
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

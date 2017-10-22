@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class RelativeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	var relatives: [ChildPerson] = []	

@@ -11,6 +11,7 @@ import UIKit
 class RelativeTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var nameLabel: UITextField!
+	
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

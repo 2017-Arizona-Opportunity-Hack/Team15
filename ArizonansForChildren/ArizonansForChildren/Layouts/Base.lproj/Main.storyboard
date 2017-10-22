@@ -208,13 +208,13 @@
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjE-Pd-kxB">
-                                        <rect key="frame" x="100" y="21" width="752" height="148"/>
+                                        <rect key="frame" x="100" y="28" width="752" height="121"/>
                                         <connections>
                                             <segue destination="b0h-LG-5Cf" kind="embed" identifier="parentCheckSegue" id="Sn3-sh-hgx"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOO-kI-hYA">
-                                        <rect key="frame" x="100" y="429" width="752" height="128"/>
+                                        <rect key="frame" x="100" y="429" width="752" height="135"/>
                                         <connections>
                                             <segue destination="0ND-Na-NvV" kind="embed" identifier="relativeCheckSegue" id="TGf-Zj-6pf"/>
                                         </connections>
@@ -224,7 +224,7 @@
                                 <constraints>
                                     <constraint firstItem="vjE-Pd-kxB" firstAttribute="leading" secondItem="SNH-ky-CaX" secondAttribute="leading" constant="100" id="2BD-WY-vit"/>
                                     <constraint firstItem="gOO-kI-hYA" firstAttribute="top" secondItem="SNH-ky-CaX" secondAttribute="top" constant="429" id="3h9-1f-b5t"/>
-                                    <constraint firstItem="vjE-Pd-kxB" firstAttribute="top" secondItem="SNH-ky-CaX" secondAttribute="top" constant="21" id="H7g-dx-YXp"/>
+                                    <constraint firstItem="vjE-Pd-kxB" firstAttribute="top" secondItem="SNH-ky-CaX" secondAttribute="top" constant="28" id="H7g-dx-YXp"/>
                                     <constraint firstItem="vjE-Pd-kxB" firstAttribute="top" secondItem="gOO-kI-hYA" secondAttribute="bottom" constant="-536" id="HQk-YU-gSE"/>
                                     <constraint firstAttribute="trailing" secondItem="gOO-kI-hYA" secondAttribute="trailing" constant="100" id="K0W-OB-lq3"/>
                                     <constraint firstAttribute="trailing" secondItem="teo-8Z-vcK" secondAttribute="trailing" constant="426" id="MAx-6l-Vll"/>
@@ -234,7 +234,7 @@
                                     <constraint firstItem="pkG-Gr-yD7" firstAttribute="top" secondItem="SNH-ky-CaX" secondAttribute="top" constant="157" id="ZTy-tp-NrV"/>
                                     <constraint firstAttribute="bottom" secondItem="teo-8Z-vcK" secondAttribute="bottom" constant="20" id="dCK-GK-YWN"/>
                                     <constraint firstItem="gOO-kI-hYA" firstAttribute="top" secondItem="pkG-Gr-yD7" secondAttribute="bottom" constant="144" id="ddm-bg-GIi"/>
-                                    <constraint firstItem="teo-8Z-vcK" firstAttribute="top" secondItem="vjE-Pd-kxB" secondAttribute="bottom" constant="435" id="eEL-sP-Fkd"/>
+                                    <constraint firstItem="teo-8Z-vcK" firstAttribute="top" secondItem="vjE-Pd-kxB" secondAttribute="bottom" constant="455" id="eEL-sP-Fkd"/>
                                     <constraint firstItem="oPX-A8-HT9" firstAttribute="leading" secondItem="SNH-ky-CaX" secondAttribute="leading" constant="100" id="fbD-TO-nif"/>
                                     <constraint firstAttribute="trailing" secondItem="pkG-Gr-yD7" secondAttribute="trailing" constant="100" id="o1T-st-5W5"/>
                                     <constraint firstItem="gOO-kI-hYA" firstAttribute="leading" secondItem="SNH-ky-CaX" secondAttribute="leading" constant="100" id="vNJ-b2-Jxi"/>
@@ -864,13 +864,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnr-7c-m2q">
+                                                    <rect key="frame" x="592" y="0.0" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="GTD-RG-k2t"/>
+                                                        <constraint firstAttribute="height" constant="45" id="hDQ-4a-QRs"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="Check-In-Button"/>
+                                                    <state key="selected" image="Check-In-Button-selected"/>
+                                                    <connections>
+                                                        <action selector="checkingIn:" destination="X4l-Pe-Veq" eventType="touchUpInside" id="Vz4-ch-kw4"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Zyt-TJ-pLh" firstAttribute="leading" secondItem="hD8-sm-GQx" secondAttribute="leadingMargin" constant="20" id="3qe-2Y-cn6"/>
+                                                <constraint firstAttribute="trailing" secondItem="bnr-7c-m2q" secondAttribute="trailing" constant="50" id="Q2E-8k-bvv"/>
                                                 <constraint firstItem="Zyt-TJ-pLh" firstAttribute="top" secondItem="hD8-sm-GQx" secondAttribute="topMargin" constant="3" id="RxA-Gc-wPe"/>
+                                                <constraint firstItem="bnr-7c-m2q" firstAttribute="centerY" secondItem="hD8-sm-GQx" secondAttribute="centerY" id="yzg-Zu-W41"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkinButton" destination="bnr-7c-m2q" id="P2U-ZE-jTJ"/>
                                             <outlet property="nameLabel" destination="Zyt-TJ-pLh" id="CjD-Xj-ups"/>
                                         </connections>
                                     </tableViewCell>
@@ -919,13 +934,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv2-5n-yUp">
+                                                    <rect key="frame" x="592" y="0.0" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="8ik-0N-Ekj"/>
+                                                        <constraint firstAttribute="height" constant="45" id="W4Y-Pi-rem"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                    <state key="normal" title="Button" image="Check-In-Button"/>
+                                                    <state key="selected" image="Check-In-Button-selected"/>
+                                                    <connections>
+                                                        <action selector="checkingIn:" destination="tnV-lr-UHP" eventType="touchUpInside" id="HKs-uI-Rwc"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NhO-PK-y3a" firstAttribute="top" secondItem="v3T-hW-GtR" secondAttribute="topMargin" constant="3" id="0IZ-gr-8O4"/>
                                                 <constraint firstItem="NhO-PK-y3a" firstAttribute="leading" secondItem="v3T-hW-GtR" secondAttribute="leadingMargin" constant="20" id="94n-4O-670"/>
+                                                <constraint firstItem="Wv2-5n-yUp" firstAttribute="centerY" secondItem="v3T-hW-GtR" secondAttribute="centerY" id="f4T-tN-u76"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wv2-5n-yUp" secondAttribute="trailing" constant="50" id="r6C-tI-2LE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkinButton" destination="Wv2-5n-yUp" id="2YG-L4-Cxx"/>
                                             <outlet property="nameLabel" destination="NhO-PK-y3a" id="zhO-qa-Zp2"/>
                                         </connections>
                                     </tableViewCell>
@@ -954,11 +985,11 @@
             <objects>
                 <viewController id="0ND-Na-NvV" customClass="GeneralRelativeTableViewController" customModule="ArizonansForChildren" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r4h-6O-TbV">
-                        <rect key="frame" x="0.0" y="0.0" width="752" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="752" height="135"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PbL-yM-hOU">
-                                <rect key="frame" x="0.0" y="0.0" width="752" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="752" height="135"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="relativeCell" id="HGJ-9T-AwK" customClass="GeneralTableViewCell" customModule="ArizonansForChildren" customModuleProvider="target">
@@ -974,12 +1005,30 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tB-cO-fpb">
+                                                    <rect key="frame" x="592" y="0.0" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="6Ex-B5-viQ"/>
+                                                        <constraint firstAttribute="width" constant="110" id="Bd4-2T-mPs"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="Check-In-Button"/>
+                                                    <state key="selected" image="Check-In-Button-selected"/>
+                                                    <connections>
+                                                        <action selector="checkingIn:" destination="HGJ-9T-AwK" eventType="touchUpInside" id="XU3-jU-r9c"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1tB-cO-fpb" secondAttribute="trailing" constant="50" id="2T1-PI-8FG"/>
                                                 <constraint firstItem="ZSO-rR-gym" firstAttribute="leading" secondItem="Qey-yU-DoF" secondAttribute="leadingMargin" constant="20" id="IyY-4T-4ul"/>
                                                 <constraint firstItem="ZSO-rR-gym" firstAttribute="top" secondItem="Qey-yU-DoF" secondAttribute="topMargin" constant="3" id="dfE-Hn-S2V"/>
+                                                <constraint firstItem="1tB-cO-fpb" firstAttribute="centerY" secondItem="Qey-yU-DoF" secondAttribute="centerY" id="ltx-uh-DPH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkinButton" destination="1tB-cO-fpb" id="Ofp-ad-m18"/>
+                                            <outlet property="nameLabel" destination="ZSO-rR-gym" id="sWB-Iq-ovR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1006,11 +1055,11 @@
             <objects>
                 <viewController id="b0h-LG-5Cf" customClass="GeneralTableViewController" customModule="ArizonansForChildren" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P2h-PX-EOx">
-                        <rect key="frame" x="0.0" y="0.0" width="752" height="148"/>
+                        <rect key="frame" x="0.0" y="0.0" width="752" height="121"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cgo-Ka-Ba4">
-                                <rect key="frame" x="0.0" y="0.0" width="752" height="148"/>
+                                <rect key="frame" x="0.0" y="0.0" width="752" height="121"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="parentCell" id="u0Q-dg-KoZ" customClass="GeneralTableViewCell" customModule="ArizonansForChildren" customModuleProvider="target">
@@ -1026,13 +1075,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-ln-VF7">
+                                                    <rect key="frame" x="592" y="0.0" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="9SV-SJ-u9d"/>
+                                                        <constraint firstAttribute="width" constant="110" id="pko-eA-uUW"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="Check-In-Button"/>
+                                                    <state key="selected" image="Check-In-Button-selected"/>
+                                                    <connections>
+                                                        <action selector="checkingIn:" destination="u0Q-dg-KoZ" eventType="touchUpInside" id="3Vb-3z-zIJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="flG-i7-fWq" firstAttribute="leading" secondItem="iMV-cI-bA3" secondAttribute="leadingMargin" constant="20" id="CN1-pI-0HD"/>
+                                                <constraint firstAttribute="trailing" secondItem="EKL-ln-VF7" secondAttribute="trailing" constant="50" id="aRY-be-oCU"/>
+                                                <constraint firstItem="EKL-ln-VF7" firstAttribute="centerY" secondItem="iMV-cI-bA3" secondAttribute="centerY" id="iPo-WD-hI0"/>
                                                 <constraint firstItem="flG-i7-fWq" firstAttribute="top" secondItem="iMV-cI-bA3" secondAttribute="topMargin" constant="3" id="zZA-HC-3BU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkinButton" destination="EKL-ln-VF7" id="JiL-k2-5uQ"/>
                                             <outlet property="nameLabel" destination="flG-i7-fWq" id="8KZ-AJ-ndE"/>
                                         </connections>
                                     </tableViewCell>
@@ -1073,6 +1137,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gqG-mN-28V"/>
-        <segue reference="V3J-UH-30r"/>
+        <segue reference="jmI-q4-knP"/>
     </inferredMetricsTieBreakers>
 </document>

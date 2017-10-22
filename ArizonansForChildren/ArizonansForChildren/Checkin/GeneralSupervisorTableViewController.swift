@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GeneralTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GeneralSupervisorTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 	@IBOutlet weak var table: UITableView!
 	var selectedPerson: Person? = nil
@@ -16,7 +16,9 @@ class GeneralTableViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
 		table.delegate = self
 		table.dataSource = self
-		table.reloadData()
+		table.allowsSelection = false
+		table.separatorStyle = UITableViewCellSeparatorStyle.none
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -39,15 +41,19 @@ class GeneralTableViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
 		if (selectedPerson != nil) {
-			return 1
+			if (selectedPerson?.parentAid != nil) {
+				return 1
+			}
 		}
 		return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "parentCell", for: indexPath) as! GeneralTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "supervisorCell", for: indexPath) as! GeneralTableViewCell
 		if (selectedPerson != nil) {
-			cell.nameLabel.text = selectedPerson?.name
+			if (selectedPerson?.parentAid != nil) {
+				cell.nameLabel.text = selectedPerson?.parentAid?.name
+			}
 		}
 		
 		return cell
