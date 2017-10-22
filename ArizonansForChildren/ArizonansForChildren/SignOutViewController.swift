@@ -1,19 +1,23 @@
 //
-//  SignInLookupViewController.swift
+//  SignOutViewController.swift
 //  ArizonansForChildren
 //
-//  Created by Westin Christensen on 10/21/17.
+//  Created by Westin Christensen on 10/22/17.
 //  Copyright © 2017 HackathonTeam15. All rights reserved.
 //
 
 import UIKit
 
-class SignInLookupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SignOutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	
+
 	var names: [Person] = []
 	
+	@IBAction func doneButton(_ sender: UIButton) {
+		
+	}
 	@IBOutlet weak var resultsTableView: UITableView!
-	@IBOutlet var nameSearched: UITextField!
+	@IBOutlet weak var nameSearched: UITextField!
 	
 	@IBAction func searchNameChanged(_ sender: UITextField) {
 		for currentName in names {
@@ -35,6 +39,7 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 		super.viewDidLoad()
 		resultsTableView.dataSource = self
 		resultsTableView.delegate = self
+		resultsTableView.allowsSelection = false
 		resultsTableView.separatorStyle = UITableViewCellSeparatorStyle.none
 		names.sort { $0.found == $1.found ? $0.name < $1.name : $0.found && !$1.found }
 	}
@@ -54,7 +59,7 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! ParentTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! SignOutTableViewCell
 		cell.nameLabel.text = names[indexPath.row].name
 		if (!names[indexPath.row].found) {
 			cell.isHidden = true
@@ -62,22 +67,14 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 		return cell
 	}
 	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "checkInPopupID") as! PopoverViewController
-		popoverVC.selectedPerson = names[indexPath.row]
-		self.addChildViewController(popoverVC)
-		popoverVC.view.frame = self.view.frame
-		self.view.addSubview(popoverVC.view)
-		popoverVC.didMove(toParentViewController: self)
-	}
+	/*
+	// MARK: - Navigation
 	
+	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if (segue.identifier == "existsSegue") {
-			if let detailViewController: DetailViewController = segue.destination as? DetailViewController {
-				let selectedIndex: IndexPath = self.resultsTableView.indexPath(for: sender as! UITableViewCell)!
-				
-				detailViewController.mainParent = names[selectedIndex.row]
-			}
-		}
+	// Get the new view controller using segue.destinationViewController.
+	// Pass the selected object to the new view controller.
 	}
+	*/
+	
 }

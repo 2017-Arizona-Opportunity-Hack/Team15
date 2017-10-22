@@ -12,6 +12,9 @@ class DetailViewController: UIViewController {
 
 	var mainParent: Person?
 	
+	@IBAction func submitButton(_ sender: Any) {
+		
+	}
 	@IBOutlet weak var child1NameField: UITextField!
 	@IBOutlet weak var parent1NameField: UITextField!
 	

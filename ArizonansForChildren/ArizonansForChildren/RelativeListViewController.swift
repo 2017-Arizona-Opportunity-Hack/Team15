@@ -1,18 +1,18 @@
 //
-//  ParentListViewController.swift
+//  RelativeListViewController.swift
 //  ArizonansForChildren
 //
-//  Created by Westin Christensen on 10/21/17.
+//  Created by Westin Christensen on 10/22/17.
 //  Copyright © 2017 HackathonTeam15. All rights reserved.
 //
 
 import UIKit
 
-class ParentListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-	var parents: [Person] = []
+class RelativeListViewController: UIViewController {
+	/*
+	var parents: [] = []
 	
-	@IBOutlet weak var parentsTable: UITableView!
+	@IBOutlet weak var relativeTable: UITableView!
 	
 	@IBAction func addParentFieldImage(_ sender: UIButton) {
 		addField()
@@ -26,7 +26,7 @@ class ParentListViewController: UIViewController, UITableViewDelegate, UITableVi
 	@IBAction func removeParentFieldButton(_ sender: UIButton) {
 		removeField()
 	}
-
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// If count is 0, no parents have been added show only one row
 		if (parents.count == 0) {
@@ -39,7 +39,7 @@ class ParentListViewController: UIViewController, UITableViewDelegate, UITableVi
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "parentCell", for: indexPath) as! ParentAddTableViewCell
 		if (parents.count == 0) {
-			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newSupervisor: ""))
+			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newFound: true))
 		} else {
 			cell.nameLabel.text = parents[indexPath.row].name
 		}
@@ -47,8 +47,8 @@ class ParentListViewController: UIViewController, UITableViewDelegate, UITableVi
 	}
 	
 	func addField() {
-		if (parents.count < 2) {
-			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newSupervisor: ""))
+		if (rel.count < 2) {
+			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newFound: true))
 			parentsTable.reloadData()
 		}
 	}
@@ -59,17 +59,23 @@ class ParentListViewController: UIViewController, UITableViewDelegate, UITableVi
 			parentsTable.reloadData()
 		}
 	}
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		parentsTable.delegate = self
 		parentsTable.dataSource = self
 		parentsTable.reloadData()
 		parentsTable.separatorStyle = UITableViewCellSeparatorStyle.none
 		parentsTable.allowsSelection = false
-    }
+	}
+*/
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 

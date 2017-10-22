@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		570854D41F9C6FCB0089DC2C /* ParentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570854D31F9C6FCB0089DC2C /* ParentListViewController.swift */; };
+		570854D61F9C91F60089DC2C /* ParentAddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570854D51F9C91F60089DC2C /* ParentAddTableViewCell.swift */; };
 		57175A171F9C3DB800BCE537 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57175A161F9C3DB800BCE537 /* DetailViewController.swift */; };
 		574A7BB21F9C504A00559BD0 /* ChildListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */; };
 		574A7BB41F9C50C400559BD0 /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */; };
@@ -15,6 +16,15 @@
 		5781B9321F9C0B640063FBE7 /* SignInLookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */; };
 		5781B9361F9C0F660063FBE7 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */; };
 		5781B9381F9C223A0063FBE7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9371F9C223A0063FBE7 /* Person.swift */; };
+		57A2F1F61F9C9C1B00DB9C0C /* RelativeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F1F51F9C9C1B00DB9C0C /* RelativeListViewController.swift */; };
+		57A2F1F81F9C9C8300DB9C0C /* RelativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F1F71F9C9C8300DB9C0C /* RelativeTableViewCell.swift */; };
+		57A2F1FA1F9CA03E00DB9C0C /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F1F91F9CA03E00DB9C0C /* SignOutViewController.swift */; };
+		57A2F1FC1F9CA08100DB9C0C /* SignOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F1FB1F9CA08100DB9C0C /* SignOutTableViewCell.swift */; };
+		57A2F1FE1F9CC40500DB9C0C /* GeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F1FD1F9CC40500DB9C0C /* GeneralTableViewCell.swift */; };
+		57A2F2001F9CC44100DB9C0C /* GeneralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F1FF1F9CC44100DB9C0C /* GeneralTableViewController.swift */; };
+		57A2F2021F9CC83100DB9C0C /* GeneraChildTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F2011F9CC83100DB9C0C /* GeneraChildTableViewController.swift */; };
+		57A2F2041F9CCDE300DB9C0C /* GeneralRelativeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F2031F9CCDE300DB9C0C /* GeneralRelativeTableViewController.swift */; };
+		57A2F2061F9CCEDF00DB9C0C /* GeneralSupervisorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2F2051F9CCEDF00DB9C0C /* GeneralSupervisorTableViewController.swift */; };
 		57FCD3CC1F9BDB2800FC2033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */; };
 		57FCD3D11F9BDB2800FC2033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FCD3CF1F9BDB2800FC2033 /* Main.storyboard */; };
 		57FCD3D41F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3D21F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld */; };
@@ -44,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		570854D31F9C6FCB0089DC2C /* ParentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentListViewController.swift; sourceTree = "<group>"; };
+		570854D51F9C91F60089DC2C /* ParentAddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAddTableViewCell.swift; sourceTree = "<group>"; };
 		57175A161F9C3DB800BCE537 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildListViewController.swift; sourceTree = "<group>"; };
 		574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
@@ -51,6 +62,15 @@
 		5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLookupViewController.swift; sourceTree = "<group>"; };
 		5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		5781B9371F9C223A0063FBE7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		57A2F1F51F9C9C1B00DB9C0C /* RelativeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeListViewController.swift; sourceTree = "<group>"; };
+		57A2F1F71F9C9C8300DB9C0C /* RelativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeTableViewCell.swift; sourceTree = "<group>"; };
+		57A2F1F91F9CA03E00DB9C0C /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		57A2F1FB1F9CA08100DB9C0C /* SignOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutTableViewCell.swift; sourceTree = "<group>"; };
+		57A2F1FD1F9CC40500DB9C0C /* GeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTableViewCell.swift; sourceTree = "<group>"; };
+		57A2F1FF1F9CC44100DB9C0C /* GeneralTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTableViewController.swift; sourceTree = "<group>"; };
+		57A2F2011F9CC83100DB9C0C /* GeneraChildTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneraChildTableViewController.swift; sourceTree = "<group>"; };
+		57A2F2031F9CCDE300DB9C0C /* GeneralRelativeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRelativeTableViewController.swift; sourceTree = "<group>"; };
+		57A2F2051F9CCEDF00DB9C0C /* GeneralSupervisorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSupervisorTableViewController.swift; sourceTree = "<group>"; };
 		57FCD3C81F9BDB2800FC2033 /* ArizonansForChildren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArizonansForChildren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57FCD3D01F9BDB2800FC2033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,9 +140,19 @@
 				57FCD3FE1F9C070C00FC2033 /* WelcomeViewController.swift */,
 				57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */,
 				57FCD3CF1F9BDB2800FC2033 /* Main.storyboard */,
+				57A2F1FD1F9CC40500DB9C0C /* GeneralTableViewCell.swift */,
+				57A2F1FF1F9CC44100DB9C0C /* GeneralTableViewController.swift */,
+				57A2F2031F9CCDE300DB9C0C /* GeneralRelativeTableViewController.swift */,
+				57A2F2051F9CCEDF00DB9C0C /* GeneralSupervisorTableViewController.swift */,
+				57A2F2011F9CC83100DB9C0C /* GeneraChildTableViewController.swift */,
+				57A2F1FB1F9CA08100DB9C0C /* SignOutTableViewCell.swift */,
+				57A2F1F91F9CA03E00DB9C0C /* SignOutViewController.swift */,
+				57A2F1F71F9C9C8300DB9C0C /* RelativeTableViewCell.swift */,
+				57A2F1F51F9C9C1B00DB9C0C /* RelativeListViewController.swift */,
 				570854D31F9C6FCB0089DC2C /* ParentListViewController.swift */,
 				574A7BB51F9C5E2200559BD0 /* PopoverViewController.swift */,
 				574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */,
+				570854D51F9C91F60089DC2C /* ParentAddTableViewCell.swift */,
 				57175A161F9C3DB800BCE537 /* DetailViewController.swift */,
 				5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */,
 				574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */,
@@ -286,13 +316,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A2F2061F9CCEDF00DB9C0C /* GeneralSupervisorTableViewController.swift in Sources */,
+				57A2F2001F9CC44100DB9C0C /* GeneralTableViewController.swift in Sources */,
 				570854D41F9C6FCB0089DC2C /* ParentListViewController.swift in Sources */,
+				57A2F1FC1F9CA08100DB9C0C /* SignOutTableViewCell.swift in Sources */,
+				570854D61F9C91F60089DC2C /* ParentAddTableViewCell.swift in Sources */,
+				57A2F2021F9CC83100DB9C0C /* GeneraChildTableViewController.swift in Sources */,
 				5781B9321F9C0B640063FBE7 /* SignInLookupViewController.swift in Sources */,
 				57FCD3FF1F9C070C00FC2033 /* WelcomeViewController.swift in Sources */,
 				574A7BB61F9C5E2200559BD0 /* PopoverViewController.swift in Sources */,
+				57A2F2041F9CCDE300DB9C0C /* GeneralRelativeTableViewController.swift in Sources */,
 				57FCD3D41F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld in Sources */,
 				5781B9381F9C223A0063FBE7 /* Person.swift in Sources */,
+				57A2F1FA1F9CA03E00DB9C0C /* SignOutViewController.swift in Sources */,
+				57A2F1FE1F9CC40500DB9C0C /* GeneralTableViewCell.swift in Sources */,
+				57A2F1F81F9C9C8300DB9C0C /* RelativeTableViewCell.swift in Sources */,
 				57FCD3CC1F9BDB2800FC2033 /* AppDelegate.swift in Sources */,
+				57A2F1F61F9C9C1B00DB9C0C /* RelativeListViewController.swift in Sources */,
 				5781B9361F9C0F660063FBE7 /* ParentTableViewCell.swift in Sources */,
 				57175A171F9C3DB800BCE537 /* DetailViewController.swift in Sources */,
 				574A7BB41F9C50C400559BD0 /* ChildTableViewCell.swift in Sources */,

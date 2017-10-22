@@ -1,17 +1,17 @@
 //
-//  ParentTableViewCell.swift
+//  ParentAddTableViewCell.swift
 //  ArizonansForChildren
 //
-//  Created by Westin Christensen on 10/21/17.
+//  Created by Westin Christensen on 10/22/17.
 //  Copyright © 2017 HackathonTeam15. All rights reserved.
 //
 
 import UIKit
 
-class ParentTableViewCell: UITableViewCell {
+class ParentAddTableViewCell: UITableViewCell {
+
 	
-	@IBOutlet weak var nameLabel: UILabel!
-	
+	@IBOutlet weak var nameLabel: UITextField!
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,4 +22,5 @@ class ParentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class ChildTableViewCell: UITableViewCell {
 	
-	
 	@IBOutlet weak var childNameField: UITextField!
 	
 	override func awakeFromNib() {
@@ -23,5 +22,4 @@ class ChildTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
