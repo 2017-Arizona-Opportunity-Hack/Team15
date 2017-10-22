@@ -10,7 +10,9 @@ import UIKit
 
 class ParentTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	
+	@IBOutlet weak var nameLabel: UILabel!
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
