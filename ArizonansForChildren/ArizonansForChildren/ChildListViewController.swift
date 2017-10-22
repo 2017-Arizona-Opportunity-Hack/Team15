@@ -15,12 +15,21 @@ class ChildListViewController: UIViewController, UITableViewDelegate, UITableVie
 	@IBOutlet weak var childrenTable: UITableView!
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return children.count
+		// If count is 0, no children have been added show only one row
+		if (children.count == 0) {
+			return 1
+		} else {
+			return children.count
+		}
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "childCell", for: indexPath) as! ChildTableViewCell
-		cell.nameLabel.text = children[indexPath.row].name
+		if (children.count == 0) {
+			cell.childNameField.text = ""
+		} else {
+			cell.childNameField.text = children[indexPath.row].name
+		}
 		return cell
 	}
 	
@@ -30,6 +39,7 @@ class ChildListViewController: UIViewController, UITableViewDelegate, UITableVie
 		childrenTable.dataSource = self
 		childrenTable.reloadData()
 		childrenTable.separatorStyle = UITableViewCellSeparatorStyle.none
+		childrenTable.allowsSelection = false
     }
 
     override func didReceiveMemoryWarning() {

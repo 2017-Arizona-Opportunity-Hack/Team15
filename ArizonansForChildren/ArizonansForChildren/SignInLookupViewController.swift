@@ -42,11 +42,11 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 		let c2 = Child(newName: "Bob")
 		
 		let p1 = Person(newName: "Tori", newId: "0", newChildren: [c1, c2], newFound: true)
-		let p2 = Person(newName: "Andreas", newId: "0", newChildren: [], newFound: true)
-		let p3 = Person(newName: "Westin", newId: "0", newChildren: [], newFound: true)
-		let p4 = Person(newName: "Dan", newId: "0", newChildren: [], newFound: true)
-		let p5 = Person(newName: "Danny", newId: "0", newChildren: [], newFound: true)
-		let p6 = Person(newName: "Diego", newId: "0", newChildren: [], newFound: true)
+		let p2 = Person(newName: "Andreas", newId: "0", newChildren: [c1], newFound: true)
+		let p3 = Person(newName: "Westin", newId: "0", newChildren: [c1], newFound: true)
+		let p4 = Person(newName: "Dan", newId: "0", newChildren: [c1], newFound: true)
+		let p5 = Person(newName: "Danny", newId: "0", newChildren: [c1], newFound: true)
+		let p6 = Person(newName: "Diego", newId: "0", newChildren: [c1], newFound: true)
 		
 		names.append(p1)
 		names.append(p2)

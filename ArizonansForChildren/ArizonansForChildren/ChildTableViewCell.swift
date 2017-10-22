@@ -11,7 +11,8 @@ import UIKit
 class ChildTableViewCell: UITableViewCell {
 	
 	
-	@IBOutlet weak var nameLabel: UILabel!
+	@IBOutlet weak var childNameField: UITextField!
+	
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
