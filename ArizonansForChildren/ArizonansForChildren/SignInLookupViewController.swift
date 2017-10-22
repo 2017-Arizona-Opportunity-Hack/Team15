@@ -13,8 +13,6 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 	var names: [Person] = []
 	var narrowedNames: [String] = []
 	
-	@IBOutlet weak var addButton: UIButton!
-	@IBOutlet weak var addLabel: UILabel!
 	@IBOutlet weak var resultsTableView: UITableView!
 	@IBOutlet var nameSearched: UITextField!
 	
@@ -39,12 +37,16 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 		resultsTableView.dataSource = self
 		resultsTableView.delegate = self
 		resultsTableView.separatorStyle = UITableViewCellSeparatorStyle.none
-		let p1 = Person(newName: "Tori", newId: "0", newFound: true)
-		let p2 = Person(newName: "Andreas", newId: "0", newFound: true)
-		let p3 = Person(newName: "Westin", newId: "0", newFound: true)
-		let p4 = Person(newName: "Dan", newId: "0", newFound: true)
-		let p5 = Person(newName: "Danny", newId: "0", newFound: true)
-		let p6 = Person(newName: "Diego", newId: "0", newFound: true)
+		
+		let c1 = Child(newName: "Steven")
+		let c2 = Child(newName: "Bob")
+		
+		let p1 = Person(newName: "Tori", newId: "0", newChildren: [c1, c2], newFound: true)
+		let p2 = Person(newName: "Andreas", newId: "0", newChildren: [], newFound: true)
+		let p3 = Person(newName: "Westin", newId: "0", newChildren: [], newFound: true)
+		let p4 = Person(newName: "Dan", newId: "0", newChildren: [], newFound: true)
+		let p5 = Person(newName: "Danny", newId: "0", newChildren: [], newFound: true)
+		let p6 = Person(newName: "Diego", newId: "0", newChildren: [], newFound: true)
 		
 		names.append(p1)
 		names.append(p2)
@@ -53,19 +55,13 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 		names.append(p5)
 		names.append(p6)
 		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		names.append(p1)
-		
+
 		names.sort { $0.found == $1.found ? $0.name < $1.name : $0.found && !$1.found }
+	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		view.endEditing(true)
+		self.nameSearched.resignFirstResponder()
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -84,5 +80,15 @@ class SignInLookupViewController: UIViewController, UITableViewDataSource, UITab
 			cell.isHidden = true
 		}
 		return cell
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if (segue.identifier == "existsSegue") {
+			if let detailViewController: DetailViewController = segue.destination as? DetailViewController {
+				let selectedIndex: IndexPath = self.resultsTableView.indexPath(for: sender as! UITableViewCell)!
+				
+				detailViewController.mainParent = names[selectedIndex.row]
+			}
+		}
 	}
 }

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57175A171F9C3DB800BCE537 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57175A161F9C3DB800BCE537 /* DetailViewController.swift */; };
+		574A7BB21F9C504A00559BD0 /* ChildListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */; };
+		574A7BB41F9C50C400559BD0 /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */; };
 		5781B9321F9C0B640063FBE7 /* SignInLookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */; };
-		5781B9341F9C0F520063FBE7 /* ParentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9331F9C0F520063FBE7 /* ParentsTableViewController.swift */; };
 		5781B9361F9C0F660063FBE7 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */; };
 		5781B9381F9C223A0063FBE7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9371F9C223A0063FBE7 /* Person.swift */; };
 		57FCD3CC1F9BDB2800FC2033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */; };
@@ -39,8 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57175A161F9C3DB800BCE537 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildListViewController.swift; sourceTree = "<group>"; };
+		574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
 		5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLookupViewController.swift; sourceTree = "<group>"; };
-		5781B9331F9C0F520063FBE7 /* ParentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewController.swift; sourceTree = "<group>"; };
 		5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		5781B9371F9C223A0063FBE7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		57FCD3C81F9BDB2800FC2033 /* ArizonansForChildren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArizonansForChildren.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,8 +116,10 @@
 				57FCD3FE1F9C070C00FC2033 /* WelcomeViewController.swift */,
 				57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */,
 				57FCD3CF1F9BDB2800FC2033 /* Main.storyboard */,
-				5781B9331F9C0F520063FBE7 /* ParentsTableViewController.swift */,
+				574A7BB11F9C504A00559BD0 /* ChildListViewController.swift */,
+				57175A161F9C3DB800BCE537 /* DetailViewController.swift */,
 				5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */,
+				574A7BB31F9C50C400559BD0 /* ChildTableViewCell.swift */,
 				57FCD3D51F9BDB2800FC2033 /* Assets.xcassets */,
 				57FCD3D71F9BDB2800FC2033 /* LaunchScreen.storyboard */,
 				57FCD3DA1F9BDB2800FC2033 /* Info.plist */,
@@ -276,11 +282,13 @@
 			files = (
 				5781B9321F9C0B640063FBE7 /* SignInLookupViewController.swift in Sources */,
 				57FCD3FF1F9C070C00FC2033 /* WelcomeViewController.swift in Sources */,
-				5781B9341F9C0F520063FBE7 /* ParentsTableViewController.swift in Sources */,
 				57FCD3D41F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld in Sources */,
 				5781B9381F9C223A0063FBE7 /* Person.swift in Sources */,
 				57FCD3CC1F9BDB2800FC2033 /* AppDelegate.swift in Sources */,
 				5781B9361F9C0F660063FBE7 /* ParentTableViewCell.swift in Sources */,
+				57175A171F9C3DB800BCE537 /* DetailViewController.swift in Sources */,
+				574A7BB41F9C50C400559BD0 /* ChildTableViewCell.swift in Sources */,
+				574A7BB21F9C504A00559BD0 /* ChildListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
