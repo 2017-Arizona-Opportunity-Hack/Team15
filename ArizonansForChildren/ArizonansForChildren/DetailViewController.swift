@@ -13,7 +13,12 @@ class DetailViewController: UIViewController {
 	var mainParent: Person?
 	
 	@IBAction func submitButton(_ sender: Any) {
-		
+		let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "checkInPopupID") as! PopoverViewController
+		popoverVC.selectedPerson = mainParent
+		self.addChildViewController(popoverVC)
+		popoverVC.view.frame = self.view.frame
+		self.view.addSubview(popoverVC.view)
+		popoverVC.didMove(toParentViewController: self)
 	}
 	@IBOutlet weak var child1NameField: UITextField!
 	@IBOutlet weak var parent1NameField: UITextField!
@@ -37,6 +42,12 @@ class DetailViewController: UIViewController {
 					childListViewController.children = (mainParent?.children)!
 				} else {
 					print("ERROR: No children exist for parent")
+				}
+			}
+		} else if (segue.identifier == "relativeSegue") {
+			if let relativeListViewController: RelativeListViewController = segue.destination as? RelativeListViewController {
+				if (mainParent?.relatives != nil) {
+					relativeListViewController.relatives = (mainParent?.relatives)!
 				}
 			}
 		}
