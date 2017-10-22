@@ -52,5 +52,10 @@ class DetailViewController: UIViewController {
 			}
 		}
     }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue)
+    {
+        print(parent1NameField.text!)
+    }
 
 }
