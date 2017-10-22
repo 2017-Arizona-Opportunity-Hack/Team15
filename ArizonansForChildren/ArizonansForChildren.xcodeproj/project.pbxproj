@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5781B9321F9C0B640063FBE7 /* SignInLookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */; };
+		5781B9341F9C0F520063FBE7 /* ParentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9331F9C0F520063FBE7 /* ParentsTableViewController.swift */; };
+		5781B9361F9C0F660063FBE7 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */; };
 		57FCD3CC1F9BDB2800FC2033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */; };
-		57FCD3CE1F9BDB2800FC2033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3CD1F9BDB2800FC2033 /* ViewController.swift */; };
 		57FCD3D11F9BDB2800FC2033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FCD3CF1F9BDB2800FC2033 /* Main.storyboard */; };
 		57FCD3D41F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3D21F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld */; };
 		57FCD3D61F9BDB2800FC2033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57FCD3D51F9BDB2800FC2033 /* Assets.xcassets */; };
 		57FCD3D91F9BDB2800FC2033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FCD3D71F9BDB2800FC2033 /* LaunchScreen.storyboard */; };
 		57FCD3E41F9BDB2800FC2033 /* ArizonansForChildrenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3E31F9BDB2800FC2033 /* ArizonansForChildrenTests.swift */; };
 		57FCD3EF1F9BDB2800FC2033 /* ArizonansForChildrenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3EE1F9BDB2800FC2033 /* ArizonansForChildrenUITests.swift */; };
+		57FCD3FF1F9C070C00FC2033 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCD3FE1F9C070C00FC2033 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLookupViewController.swift; sourceTree = "<group>"; };
+		5781B9331F9C0F520063FBE7 /* ParentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewController.swift; sourceTree = "<group>"; };
+		5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		57FCD3C81F9BDB2800FC2033 /* ArizonansForChildren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArizonansForChildren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57FCD3CD1F9BDB2800FC2033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57FCD3D01F9BDB2800FC2033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57FCD3D31F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArizonansForChildren.xcdatamodel; sourceTree = "<group>"; };
 		57FCD3D51F9BDB2800FC2033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		57FCD3EA1F9BDB2800FC2033 /* ArizonansForChildrenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArizonansForChildrenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCD3EE1F9BDB2800FC2033 /* ArizonansForChildrenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArizonansForChildrenUITests.swift; sourceTree = "<group>"; };
 		57FCD3F01F9BDB2900FC2033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57FCD3FE1F9C070C00FC2033 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		57FCD3CA1F9BDB2800FC2033 /* ArizonansForChildren */ = {
 			isa = PBXGroup;
 			children = (
+				5781B9311F9C0B640063FBE7 /* SignInLookupViewController.swift */,
+				57FCD3FE1F9C070C00FC2033 /* WelcomeViewController.swift */,
 				57FCD3CB1F9BDB2800FC2033 /* AppDelegate.swift */,
-				57FCD3CD1F9BDB2800FC2033 /* ViewController.swift */,
 				57FCD3CF1F9BDB2800FC2033 /* Main.storyboard */,
+				5781B9331F9C0F520063FBE7 /* ParentsTableViewController.swift */,
+				5781B9351F9C0F660063FBE7 /* ParentTableViewCell.swift */,
 				57FCD3D51F9BDB2800FC2033 /* Assets.xcassets */,
 				57FCD3D71F9BDB2800FC2033 /* LaunchScreen.storyboard */,
 				57FCD3DA1F9BDB2800FC2033 /* Info.plist */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5781B9321F9C0B640063FBE7 /* SignInLookupViewController.swift in Sources */,
+				57FCD3FF1F9C070C00FC2033 /* WelcomeViewController.swift in Sources */,
+				5781B9341F9C0F520063FBE7 /* ParentsTableViewController.swift in Sources */,
 				57FCD3D41F9BDB2800FC2033 /* ArizonansForChildren.xcdatamodeld in Sources */,
-				57FCD3CE1F9BDB2800FC2033 /* ViewController.swift in Sources */,
 				57FCD3CC1F9BDB2800FC2033 /* AppDelegate.swift in Sources */,
+				5781B9361F9C0F660063FBE7 /* ParentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ArizonansForChildren/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.westinprogramming.ArizonansForChildren;
@@ -445,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ArizonansForChildren/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.westinprogramming.ArizonansForChildren;
