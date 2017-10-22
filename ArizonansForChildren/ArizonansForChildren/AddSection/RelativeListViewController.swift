@@ -8,8 +8,15 @@
 
 import UIKit
 
+
+protocol ModalViewControllerDelegate {
+	func sendValue(test: String)
+}
+
 class RelativeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
+	var delegate:ModalViewControllerDelegate!
+
 	var relatives: [ChildPerson] = []	
 	@IBOutlet weak var relativeTable: UITableView!
 	
@@ -60,7 +67,7 @@ class RelativeListViewController: UIViewController, UITableViewDelegate, UITable
 		}
 	}
 
-override func viewDidLoad() {
+	override func viewDidLoad() {
 		super.viewDidLoad()
 		relativeTable.delegate = self
 		relativeTable.dataSource = self
@@ -68,7 +75,7 @@ override func viewDidLoad() {
 		relativeTable.separatorStyle = UITableViewCellSeparatorStyle.none
 		relativeTable.allowsSelection = false
 	}
-
+	
 	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

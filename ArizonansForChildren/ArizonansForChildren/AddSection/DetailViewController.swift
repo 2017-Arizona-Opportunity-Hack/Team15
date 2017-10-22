@@ -8,11 +8,16 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
 
+class DetailViewController: UIViewController, ModalViewControllerDelegate {
+	
 	var mainParent: Person?
 	
-	@IBAction func submitButton(_ sender: Any) {
+	func sendValue(test: String) {
+		print(test)
+	}
+	
+	@IBAction func submitButton(_ sender: Any) {		
 		let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "checkInPopupID") as! PopoverViewController
 		popoverVC.selectedPerson = mainParent
 		self.addChildViewController(popoverVC)

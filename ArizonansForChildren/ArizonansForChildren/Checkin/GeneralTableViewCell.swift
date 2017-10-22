@@ -14,12 +14,12 @@ class GeneralTableViewCell: UITableViewCell {
 	
 	@IBAction func checkingIn(_ sender: UIButton) {
 		checkinButton.setImage(UIImage(named: "green-checkmark"), for: .normal)
-		
-		let d = Date()
-		let calendar = Calendar.current
-		let hour = calendar.component(.hour, from: d)
-		let minutes = calendar.component(.minute, from: d)
-		let checkOutTime: String = "\(hour):\(minutes)"
+//		
+//		let d = Date()
+//		let calendar = Calendar.current
+//		let hour = calendar.component(.hour, from: d)
+//		let minutes = calendar.component(.minute, from: d)
+//		//let checkOutTime: String = "\(hour):\(minutes)"
 		
 	}
 	
