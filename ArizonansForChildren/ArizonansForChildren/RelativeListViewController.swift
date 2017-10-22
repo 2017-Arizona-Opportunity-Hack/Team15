@@ -8,10 +8,10 @@
 
 import UIKit
 
-class RelativeListViewController: UIViewController {
-	/*
-	var parents: [] = []
+
+class RelativeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
+	var relatives: [ChildPerson] = []	
 	@IBOutlet weak var relativeTable: UITableView!
 	
 	@IBAction func addParentFieldImage(_ sender: UIButton) {
@@ -29,51 +29,48 @@ class RelativeListViewController: UIViewController {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// If count is 0, no parents have been added show only one row
-		if (parents.count == 0) {
+		if (relatives.count == 0) {
 			return 1
 		} else {
-			return parents.count
+			return relatives.count
 		}
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "parentCell", for: indexPath) as! ParentAddTableViewCell
-		if (parents.count == 0) {
-			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newFound: true))
+
+		let cell = tableView.dequeueReusableCell(withIdentifier: "relativeCell", for: indexPath) as! RelativeTableViewCell
+		if (relatives.count == 0) {
+			relatives.append(ChildPerson(newName: ""))
 		} else {
-			cell.nameLabel.text = parents[indexPath.row].name
+			cell.nameLabel.text = relatives[indexPath.row].name
 		}
 		return cell
 	}
 	
 	func addField() {
-		if (rel.count < 2) {
-			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newFound: true))
-			parentsTable.reloadData()
+		if (relatives.count < 6) {
+			relatives.append(ChildPerson(newName: ""))
+			relativeTable.reloadData()
 		}
 	}
-	
+
 	func removeField() {
-		if (parents.count > 1) {
-			parents.removeLast()
-			parentsTable.reloadData()
+		if (relatives.count >= 0) {
+			relatives.removeLast()
+			relativeTable.reloadData()
 		}
 	}
-	override func viewDidLoad() {
+
+override func viewDidLoad() {
 		super.viewDidLoad()
-		parentsTable.delegate = self
-		parentsTable.dataSource = self
-		parentsTable.reloadData()
-		parentsTable.separatorStyle = UITableViewCellSeparatorStyle.none
-		parentsTable.allowsSelection = false
-	}
-*/
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+		relativeTable.delegate = self
+		relativeTable.dataSource = self
+		relativeTable.reloadData()
+		relativeTable.separatorStyle = UITableViewCellSeparatorStyle.none
+		relativeTable.allowsSelection = false
 	}
 
-    override func didReceiveMemoryWarning() {
+	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

@@ -324,7 +324,7 @@
                                 </connections>
                             </containerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4K-ZI-S6m">
-                                <rect key="frame" x="179" y="235" width="868" height="30"/>
+                                <rect key="frame" x="192" y="235" width="855" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -336,7 +336,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2z-15-nMv">
-                                <rect key="frame" x="179" y="629" width="868" height="30"/>
+                                <rect key="frame" x="187" y="629" width="860" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -357,11 +357,11 @@
                             <constraint firstItem="qCG-l5-LBg" firstAttribute="top" secondItem="qCF-Fc-Wm4" secondAttribute="top" constant="50" id="2kc-dK-X4Y"/>
                             <constraint firstItem="qCF-Fc-Wm4" firstAttribute="trailing" secondItem="fVr-fu-QIg" secondAttribute="trailing" constant="60" id="6dK-fc-J1G"/>
                             <constraint firstItem="tSE-Mm-dw3" firstAttribute="leading" secondItem="qCF-Fc-Wm4" secondAttribute="leading" constant="80" id="8Ga-KD-vcm"/>
-                            <constraint firstItem="w2z-15-nMv" firstAttribute="leading" secondItem="tSE-Mm-dw3" secondAttribute="trailing" constant="50" id="9dr-dl-x3B"/>
+                            <constraint firstItem="w2z-15-nMv" firstAttribute="leading" secondItem="tSE-Mm-dw3" secondAttribute="trailing" constant="58" id="9dr-dl-x3B"/>
                             <constraint firstItem="fVr-fu-QIg" firstAttribute="top" secondItem="DTz-ec-eRc" secondAttribute="bottom" constant="47" id="IR1-8U-WFy"/>
                             <constraint firstItem="qCF-Fc-Wm4" firstAttribute="trailing" secondItem="w2z-15-nMv" secondAttribute="trailing" constant="65" id="LpC-Qj-HtG"/>
                             <constraint firstItem="P8V-uv-eG0" firstAttribute="leading" secondItem="qCF-Fc-Wm4" secondAttribute="leading" constant="80" id="MxQ-LN-Nwn"/>
-                            <constraint firstItem="a4K-ZI-S6m" firstAttribute="leading" secondItem="P8V-uv-eG0" secondAttribute="trailing" constant="15" id="RDN-Jh-Bho"/>
+                            <constraint firstItem="a4K-ZI-S6m" firstAttribute="leading" secondItem="P8V-uv-eG0" secondAttribute="trailing" constant="28" id="RDN-Jh-Bho"/>
                             <constraint firstItem="DTz-ec-eRc" firstAttribute="top" secondItem="P8V-uv-eG0" secondAttribute="bottom" constant="8" id="Syp-XM-DyG"/>
                             <constraint firstItem="DTz-ec-eRc" firstAttribute="leading" secondItem="qCF-Fc-Wm4" secondAttribute="leading" constant="60" id="TzK-eL-Jme"/>
                             <constraint firstItem="fVr-fu-QIg" firstAttribute="leading" secondItem="qCF-Fc-Wm4" secondAttribute="leading" constant="60" id="brS-TL-J1f"/>
@@ -659,21 +659,12 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRV-bN-jS7">
-                                                    <rect key="frame" x="0.0" y="10" width="13" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="srE-ED-tbn" firstAttribute="leading" secondItem="M26-Of-Oie" secondAttribute="trailing" constant="59" id="4Tr-3B-gKX"/>
-                                                <constraint firstItem="M26-Of-Oie" firstAttribute="leading" secondItem="sRV-bN-jS7" secondAttribute="trailing" id="7LX-hY-qys"/>
                                                 <constraint firstItem="M26-Of-Oie" firstAttribute="leading" secondItem="pLp-7m-x7b" secondAttribute="leadingMargin" constant="5" id="Dup-BM-1AH"/>
                                                 <constraint firstItem="M26-Of-Oie" firstAttribute="centerY" secondItem="pLp-7m-x7b" secondAttribute="centerY" id="JBZ-Y7-xRy"/>
                                                 <constraint firstAttribute="trailing" secondItem="srE-ED-tbn" secondAttribute="trailing" constant="5" id="c3f-m2-w6B"/>
-                                                <constraint firstItem="sRV-bN-jS7" firstAttribute="leading" secondItem="pLp-7m-x7b" secondAttribute="leading" id="dlA-z8-IA0"/>
-                                                <constraint firstItem="sRV-bN-jS7" firstAttribute="top" secondItem="pLp-7m-x7b" secondAttribute="top" constant="10" id="sO0-W4-nwn"/>
                                                 <constraint firstItem="srE-ED-tbn" firstAttribute="centerY" secondItem="pLp-7m-x7b" secondAttribute="centerY" id="tjE-WG-DwB"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -691,10 +682,16 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Create-Task-Button"/>
                                 <state key="selected" image="Check-In-Button-selected"/>
+                                <connections>
+                                    <action selector="addParentFieldImage:" destination="MuC-Ic-c5N" eventType="touchUpInside" id="JRj-8Q-WSF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvh-dh-ZS6">
                                 <rect key="frame" x="35" y="120" width="209" height="30"/>
                                 <state key="normal" title="Add Relative/Friend/Transport "/>
+                                <connections>
+                                    <action selector="addParentFieldButton:" destination="MuC-Ic-c5N" eventType="touchUpInside" id="VQ4-qA-s9o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnz-Lv-XwW">
                                 <rect key="frame" x="284" y="126" width="20" height="20"/>
@@ -703,10 +700,16 @@
                                     <constraint firstAttribute="height" constant="20" id="iPN-Ng-8cH"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="minus-1"/>
+                                <connections>
+                                    <action selector="removeParentFieldImage:" destination="MuC-Ic-c5N" eventType="touchUpInside" id="Bc7-sm-MnZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bed-gr-ccg">
                                 <rect key="frame" x="309" y="120" width="233" height="30"/>
                                 <state key="normal" title="Remove Relative/Friend/Transport"/>
+                                <connections>
+                                    <action selector="removeParentFieldButton:" destination="MuC-Ic-c5N" eventType="touchUpInside" id="f7v-VM-MsQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -727,6 +730,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oeb-oQ-Gmh"/>
                     </view>
+                    <connections>
+                        <outlet property="relativeTable" destination="LO5-9v-9c2" id="ziv-Gk-nc5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9U-Bu-Jw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
