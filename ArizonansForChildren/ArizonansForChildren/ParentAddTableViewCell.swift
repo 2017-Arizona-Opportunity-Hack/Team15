@@ -10,7 +10,10 @@ import UIKit
 
 class ParentAddTableViewCell: UITableViewCell {
 
-	
+    @IBAction func transfer(_ sender: Any) {
+        
+    }
+    
 	@IBOutlet weak var nameLabel: UITextField!
 	override func awakeFromNib() {
         super.awakeFromNib()
