@@ -39,7 +39,7 @@ class ParentListViewController: UIViewController, UITableViewDelegate, UITableVi
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "parentCell", for: indexPath) as! ParentAddTableViewCell
 		if (parents.count == 0) {
-			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newFound: true))
+            parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newSupervisor: ""))
 		} else {
 			cell.nameLabel.text = parents[indexPath.row].name
 		}
@@ -48,7 +48,7 @@ class ParentListViewController: UIViewController, UITableViewDelegate, UITableVi
 	
 	func addField() {
 		if (parents.count < 2) {
-			parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newFound: true))
+            parents.append(Person(newName: "", newId: "", newChildren: [ChildPerson(newName: "")], newSupervisor: ""))
 			parentsTable.reloadData()
 		}
 	}

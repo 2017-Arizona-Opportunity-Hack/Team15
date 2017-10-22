@@ -23,6 +23,17 @@ class SignOutTableViewCell: UITableViewCell {
 			signoutButton.setImage(image, for: .normal)
 			// set sign out to true
 		}
+        // here is the checkout time as a string
+        // TODO: add checkout time to person
+        let d = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: d)
+        let minutes = calendar.component(.minute, from: d)
+        let checkOutTime: String = "\(hour):\(minutes)"
+        
+        
+        
+        
 	}
 	override func awakeFromNib() {
         super.awakeFromNib()
