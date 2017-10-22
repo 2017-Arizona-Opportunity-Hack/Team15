@@ -10,7 +10,19 @@ import UIKit
 
 class ChildListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var children: [Child] = []
+	@IBAction func addChildFieldButton(_ sender: UIButton) {
+		addField()
+	}
+	@IBAction func addChildFieldImage(_ sender: UIButton) {
+		addField()
+	}
+	@IBAction func removeChildFieldImage(_ sender: UIButton) {
+		removeField()
+	}
+	@IBAction func removeChildFieldButton(_ sender: UIButton) {
+		removeField()
+	}
+	var children: [ChildPerson] = []
 	
 	@IBOutlet weak var childrenTable: UITableView!
 	
@@ -26,7 +38,7 @@ class ChildListViewController: UIViewController, UITableViewDelegate, UITableVie
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "childCell", for: indexPath) as! ChildTableViewCell
 		if (children.count == 0) {
-			cell.childNameField.text = ""
+			children.append(ChildPerson(newName: ""))
 		} else {
 			cell.childNameField.text = children[indexPath.row].name
 		}
@@ -40,12 +52,24 @@ class ChildListViewController: UIViewController, UITableViewDelegate, UITableVie
 		childrenTable.reloadData()
 		childrenTable.separatorStyle = UITableViewCellSeparatorStyle.none
 		childrenTable.allowsSelection = false
-    }
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func addField() {
+		children.append(ChildPerson(newName: ""))
+		childrenTable.reloadData()
+	}
+	
+	func removeField() {
+		if (children.count > 1) {
+			children.removeLast()
+			childrenTable.reloadData()
+		}
+	}
 
     /*
     // MARK: - Navigation

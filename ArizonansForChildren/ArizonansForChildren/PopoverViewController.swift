@@ -10,6 +10,8 @@ import UIKit
 
 class PopoverViewController: UIViewController {
 
+	var selectedPerson: Person?
+
 	@IBOutlet weak var viewLayer: UIView!
 	@IBAction func doneSaveCheckin(_ sender: Any) {
 		self.removeAnimate()
@@ -41,13 +43,29 @@ class PopoverViewController: UIViewController {
 		self.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
 		self.showAnimate()
     }
-
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 	
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if (segue.identifier == "childCheckSegue") {
+			if let generalChildVC: GeneralChildTableViewController = segue.destination as? GeneralChildTableViewController {
+				generalChildVC.selectedPerson = selectedPerson
+			}
+		} else if (segue.identifier == "parentCheckSegue") {
+			if let generalParentVC: GeneralTableViewController = segue.destination as? GeneralTableViewController {
+				generalParentVC.selectedPerson = selectedPerson
+			}
+		} else if (segue.identifier == "relativeCheckSegue") {
+			if let generalRelativeVC: GeneralRelativeTableViewController = segue.destination as? GeneralRelativeTableViewController {
+				generalRelativeVC.selectedPerson = selectedPerson
+			}
+		} else if (segue.identifier == "supervisorCheckSegue") {
+			if let generalSupervisorVC: GeneralSupervisorTableViewController = segue.destination as? GeneralSupervisorTableViewController {
+				generalSupervisorVC.selectedPerson = selectedPerson
+			}
+		}
     }
-
 
 }
