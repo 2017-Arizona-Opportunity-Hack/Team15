@@ -10,8 +10,12 @@ if (mysqli_connect_errno())
 }
 
 // This SQL statement selects ALL from the table 'Locations'
-$sql = "INSERT INTO parent1 (DATE, VID, PARENT1_FN, PARENT1_LN, TIME_IN, TIME_OUT)
-VALUES ('1', '2', 'Westin', 'Chrechechen', '1000', '2000')";
+$postVar = $_POST['data'];
+
+if (!empty($postVar)) 
+{
+	$sql = $postVar;
+}
 
 if (mysqli_query($con, $sql)) {
     echo "New record created successfully";
